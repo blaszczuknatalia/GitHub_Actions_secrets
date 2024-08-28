@@ -6,7 +6,7 @@ env:
 
 jobs:
   display-variables:
-    name: ${{ env.ENVIRONMENT_VAR }}
+    name: ${{ env.WORKFLOW_VAR }}
     runs-on: ubuntu-latest
     environment: test
     env:
