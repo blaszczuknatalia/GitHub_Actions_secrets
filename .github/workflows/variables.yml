@@ -8,6 +8,7 @@ jobs:
   display-variables:
     name: var.ENVIRONMENT_VAR
     runs-on: ubuntu-latest
+    environment: test
     env:
       JOB_VAR: "Job"
     steps:
