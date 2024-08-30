@@ -13,10 +13,15 @@ on:
       environment:
         required: true
         type: environment
+      matrix:
+        required: true
+        type: string
 
 jobs:
   log-the-inputs:
     runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{fromJson(inputs.matrix)}}
     steps:
     - name: Log the inputs
       run: |
